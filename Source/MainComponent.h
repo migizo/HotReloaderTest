@@ -16,10 +16,13 @@ public:
 
 private:
     //==============================================================================
+    // Resources/sample.txt
     std::unique_ptr<HotReloader> fileHotReloader;
-    std::unique_ptr<HotReloader> folderHotReloader;
-
     juce::TextEditor fileTextView;
+
+    // Resources/sampleFolderフォルダ
+    void resetFolderViewBounds(juce::Rectangle<int> area);
+    std::unique_ptr<HotReloader> folderHotReloader;
     juce::OwnedArray<juce::TextEditor> folderFileTextView;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
