@@ -23,7 +23,7 @@ MainComponent::MainComponent()
     //------------------------------------------
     auto folderReloadCallback = [this](const juce::File& folder)
     {
-        juce::Array<juce::File> fileList = folder.findChildFiles(juce::File::TypesOfFileToFind::findFiles, false);
+        juce::Array<juce::File> fileList = folder.findChildFiles(juce::File::TypesOfFileToFind::findFiles, true);
 
         folderFileTextView.clear();
         for (auto& f: fileList)
